@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porfa ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(135deg, #5a85c6, #9dbce7);
+      text-align: center;
+    }
+
+    h1 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      background-color: #092c5d;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #092c5d;
+    }
+
+    /* Imagen pantalla completa */
+    #fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Porfa ❤️</h1>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2b0eQM2015zkDAcrvYaXClTTPEnnWahFsfA&s" alt="Imagen Porfa">
+
+  <div class="buttons">
+    <button onclick="mostrarImagen()">Sí</button>
+    <button onclick="volver()">No</button>
+  </div>
+
+  <!-- Pantalla completa -->
+  <div id="fullscreen" onclick="cerrarImagen()">
+    <img src="https://i.pinimg.com/736x/21/19/90/211990adfd9a754db71c0866db282e8d.jpg" alt="Imagen Sí">
+  </div>
+
+  <script>
+    function mostrarImagen() {
+      document.getElementById('fullscreen').style.display = 'flex';
+    }
+    function cerrarImagen() {
+      document.getElementById('fullscreen').style.display = 'none';
+    }
+    function volver() {
+      window.location.href = "index.html"; // vuelve a la página principal
+    }
+  </script>
+</body>
+</html>
